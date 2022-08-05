@@ -1,14 +1,34 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package lab3p2_wilmer_12211100;
 
-/**
- *
- * @author wilme
- */
+
 public class Lunas {
-    
+   protected String Luna; 
+   protected int Crateres;
+
+    public Lunas() {
+    }
+
+    public String getLuna() {
+        return Luna;
+    }
+
+    public void setLuna(String Luna) {
+        this.Luna = Luna;
+    }
+
+    public int getCrateres() {
+        return Crateres;
+    }
+
+    public void setCrateres(int Crateres) {
+        this.Crateres = Crateres;
+    }
+
+    @Override
+    public String toString() {
+        return "Lunas{" + "Luna=" + Luna + ", Crateres=" + Crateres + '}';
+    }
+   
+   
 }

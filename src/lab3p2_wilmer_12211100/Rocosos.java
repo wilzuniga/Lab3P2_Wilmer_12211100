@@ -1,14 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package lab3p2_wilmer_12211100;
 
-/**
- *
- * @author wilme
- */
-public class Rocosos {
-    
+public class Rocosos extends Planetas{
+   protected double Densidad;
+   protected boolean Vida;
+
+    public Rocosos(String Nombre, double Masa, double Radio, double Temperatura, double VelocidadEsc) {
+        super(Nombre, Masa, Radio, Temperatura, VelocidadEsc);
+    }
+
+    public Rocosos() {
+    }
+
+   
+   
 }
