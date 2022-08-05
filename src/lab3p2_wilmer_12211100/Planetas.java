@@ -11,7 +11,7 @@ protected String Nombre;
     protected double Radio;
     protected double Temperatura;
     protected double VelocidadEsc;//
-    protected ArrayList <Lunas> Lunas;
+    protected ArrayList <Lunas> Lunas = new ArrayList();
 
     public Planetas(String Nombre, double Masa, double Radio, double Temperatura, double VelocidadEsc) {
         this.Nombre = Nombre;

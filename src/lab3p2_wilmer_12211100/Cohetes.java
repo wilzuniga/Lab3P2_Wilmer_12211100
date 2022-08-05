@@ -9,7 +9,7 @@ public class Cohetes {
     protected int Serie;
     protected int Potencia;
     protected double Velocidad;
-    protected ArrayList <Personas> Personas ;
+    protected ArrayList <Personas> Personas = new ArrayList();
 
     public Cohetes(double pesosop, String Nombre, int Serie, int Potencia, double Velocidad) {
         this.Pesosop = pesosop;

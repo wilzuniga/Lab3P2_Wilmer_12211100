@@ -18,5 +18,27 @@ public class Gaseoso extends Planetas {
         this.Anillos = Anillos;
     }
 
+    public double getPresion() {
+        return Presion;
+    }
+
+    public void setPresion(double Presion) {
+        this.Presion = Presion;
+    }
+
+    public int getAnillos() {
+        return Anillos;
+    }
+
+    public void setAnillos(int Anillos) {
+        this.Anillos = Anillos;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "Gaseoso{" + "Presion=" + Presion + ", Anillos=" + Anillos + '}';
+    }
+    
+    
    
 }

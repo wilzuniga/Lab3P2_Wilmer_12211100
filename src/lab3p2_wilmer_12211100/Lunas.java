@@ -9,6 +9,12 @@ public class Lunas {
     public Lunas() {
     }
 
+    public Lunas(String Luna, int Crateres) {
+        this.Luna = Luna;
+        this.Crateres = Crateres;
+    }
+
+    
     public String getLuna() {
         return Luna;
     }
