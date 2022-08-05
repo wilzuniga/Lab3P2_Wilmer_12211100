@@ -11,7 +11,7 @@ public class Cohetes {
     protected double Velocidad;
     protected ArrayList <Personas> Personas = new ArrayList();
 
-    public Cohetes(double pesosop, String Nombre, int Serie, int Potencia, double Velocidad) {
+public Cohetes(double pesosop, String Nombre, int Serie, int Potencia, double Velocidad) {
         this.Pesosop = pesosop;
         this.Nombre = Nombre;
         this.Serie = Serie;
