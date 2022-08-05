@@ -47,7 +47,7 @@ public class CCombustible_Fases extends Cohetes {
 
     @Override
     public String toString() {
-        return "CCombustible_Fases{" + "Fases=" + Fases + ", Motores=" + Motores + ", Altura=" + Altura + '}';
+        return super.toString() + "CCombustible_Fases{" + "Fases=" + Fases + ", Motores=" + Motores + ", Altura=" + Altura + '}';
     }
     
     

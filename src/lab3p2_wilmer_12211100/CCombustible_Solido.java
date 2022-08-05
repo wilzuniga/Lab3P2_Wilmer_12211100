@@ -33,7 +33,7 @@ public class CCombustible_Solido extends Cohetes{
 
     @Override
     public String toString() {
-        return "CCombustible_Solido{" + "KilosComb=" + KilosComb + ", Material=" + Material + '}';
+        return super.toString() +  "CCombustible_Solido{" + "KilosComb=" + KilosComb + ", Material=" + Material + '}';
     }
     
     
