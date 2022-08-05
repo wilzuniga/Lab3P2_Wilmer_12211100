@@ -553,6 +553,30 @@ public class Lab3P2_Wilmer_12211100 {
                                 System.out.println("lanzamientos exitosos: " +exito );
                                 System.out.println("lanzamientos fallidos: " + fallo);
                             }break;
+                            
+                            case 2:{
+                                System.out.println("Ingrese el indice de el cohete  que desea lanzar: ");
+                                lea = new Scanner(System.in);
+                                int indicohet = lea.nextInt();
+                                System.out.println("");
+                                int coso = 5000 + r.nextInt(20000);
+                                int fallo = 0;
+                                int exito = 0;
+                                
+                                if (coso * Cohetes.get(Cohetes.indexOf(indicohet)).getPotencia() < Planets.get(indiceplanet).getVelocidadEsc()) {
+                                    fallo++;
+                                } else {
+                                    exito++;
+                                }
+                                
+                                System.out.println("lanzamientos exitosos: " + exito);
+                                System.out.println("lanzamientos fallidos: " + fallo);
+                            }break;
+                            
+                            default:{
+                                System.out.println("Opcion incorrecta, es muy posible que el cohete estallara");
+                                System.out.println("queda en su conciencia");
+                            }
 
                         }
                     }
