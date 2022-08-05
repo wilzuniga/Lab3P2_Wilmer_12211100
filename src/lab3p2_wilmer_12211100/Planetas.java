@@ -1,17 +1,17 @@
-
 package lab3p2_wilmer_12211100;
 
 import java.util.ArrayList;
 
-
 public class Planetas {
 
-protected String Nombre;
-    protected double  Masa;
+    protected String Nombre;
+    protected double G = Math.sqrt(6.67 * Math.pow(10, -11));
+
+    protected double Masa;
     protected double Radio;
     protected double Temperatura;
-    protected double VelocidadEsc;//
-    protected ArrayList <Lunas> Lunas = new ArrayList();
+    protected double VelocidadEsc = Math.sqrt(((2 * G * Masa) / Radio));
+    protected ArrayList<Lunas> Lunas = new ArrayList();
 
     public Planetas(String Nombre, double Masa, double Radio, double Temperatura, double VelocidadEsc) {
         this.Nombre = Nombre;
@@ -76,7 +76,5 @@ protected String Nombre;
     public String toString() {
         return "Planetas{" + "Nombre=" + Nombre + ", Masa=" + Masa + ", Radio=" + Radio + ", Temperatura=" + Temperatura + ", VelocidadEsc=" + VelocidadEsc + ", Lunas=" + Lunas + '}';
     }
-    
-    
-    
+
 }

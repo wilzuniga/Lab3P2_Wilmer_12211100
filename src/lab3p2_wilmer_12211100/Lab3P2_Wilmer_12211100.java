@@ -7,7 +7,10 @@ import java.util.Random;
 public class Lab3P2_Wilmer_12211100 {
 
     static Scanner lea = new Scanner(System.in);
-    static double  G = Math.sqrt(6.67*Math.pow(10, -11));;
+    static Random r = new Random();
+    static double G = Math.sqrt(6.67 * Math.pow(10, -11));
+
+    ;
 
     public static void main(String[] args) {
         try {
@@ -17,7 +20,7 @@ public class Lab3P2_Wilmer_12211100 {
             Planets.add(new Gaseoso(50.2, 3, "Omicron", 2800.2, 5800, 102, 200));
             Planets.get(0).getLunas().add(new Lunas("BLA BLA", 18));
 
-            Planets.add(new Gaseoso(50.2, 3, "Delta", 2600.2, 50000, 160, 1000));
+            Planets.add(new Gaseoso(50.2, 3, "Delta", 2600.2, 50000, 160, 1541561));
             Planets.get(1).getLunas().add(new Lunas("Virgilio", 118));
 
             Planets.add(new Gaseoso(50.2, 3, "Aldo", 2800.2, 5900, 180, 100));
@@ -199,7 +202,6 @@ public class Lab3P2_Wilmer_12211100 {
 //                                lea = new Scanner(System.in);
 //                                double Presion = lea.nextDouble();
 //                                System.out.println("");
-
                                 System.out.println("Ingrese el numero de kilos de combustible de el cohete: ");
                                 lea = new Scanner(System.in);
                                 int KilosComb = lea.nextInt();
@@ -392,11 +394,12 @@ public class Lab3P2_Wilmer_12211100 {
 
                                         }
                                         break;
-                                        
-                                        case 4:{
+
+                                        case 4: {
                                             Planets.get(indcoh).getLunas().remove(ind);
 
-                                        }break;
+                                        }
+                                        break;
 
                                         default: {
                                             System.out.println("Algo salio mal, probablemente la persona murio.");
@@ -406,12 +409,12 @@ public class Lab3P2_Wilmer_12211100 {
 
                             }
                             break;
-                            
+
                         }
                     }
                     break;//5000 + variable . nextInt(20000)
-                    
-                    case 4:{
+
+                    case 4: {
                         System.out.println("---------------------------------------");
                         System.out.println("1 - Crear Luna");
                         System.out.println("2 - Modificar Luna");
@@ -492,7 +495,7 @@ public class Lab3P2_Wilmer_12211100 {
                                         break;
 
                                         case 3: {
-                                            
+
                                             Cohetes.get(indcoh).getPersonas().remove(ind);
 
                                         }
@@ -508,13 +511,52 @@ public class Lab3P2_Wilmer_12211100 {
                             break;
 
                         }
-                    }break;
-                    
-                    case 5:{
+                    }
+                    break;
+
+                    case 5: {
                         for (Cohetes Cohete : Cohetes) {
+                            System.out.println("Cohete " + Cohetes.indexOf(Cohete));
                             System.out.println(Cohete);
                         }
                     }
+                    break;
+
+                    case 6: {
+                        System.out.println("Ingrese el indice de el planeta que al que desea lanzar: ");
+                        lea = new Scanner(System.in);
+                        int indiceplanet = lea.nextInt();
+                        System.out.println("");
+
+                        System.out.println("---------------------------------------");
+                        System.out.println("1 - Lanzar todos");
+                        System.out.println("2 - Lanzar individual");
+                        System.out.println("---------------------------------------");
+                        System.out.println("Ingrese la opcion que desea: ");
+                        lea = new Scanner(System.in);
+                        int cohetesopci = lea.nextInt();
+                        System.out.println("");
+
+                        switch (cohetesopci) {
+                            case 1: {
+                                int coso = 5000 + r.nextInt(20000);
+                                int fallo = 0;
+                                int exito = 0;
+                                for (Cohetes Cohete : Cohetes) {
+                                    if (coso * Cohetes.get(Cohetes.indexOf(Cohete)).getPotencia() < Planets.get(indiceplanet).getVelocidadEsc()) {
+                                        fallo++;
+                                    } else {
+                                        exito++;
+                                    }
+
+                                }
+                                System.out.println("lanzamientos exitosos: " +exito );
+                                System.out.println("lanzamientos fallidos: " + fallo);
+                            }break;
+
+                        }
+                    }
+                    break;
                 }
 
             }
