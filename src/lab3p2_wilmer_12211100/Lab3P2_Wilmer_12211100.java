@@ -46,7 +46,7 @@ public class Lab3P2_Wilmer_12211100 {
                 System.out.println("2 - Crear Cohete");//
                 System.out.println("3 - Editar Cohete");//Personas//
                 System.out.println("4 - Editar Planeta");//Lunas
-                System.out.println("5 - Listar  Cohete");
+                System.out.println("5 - Listar ");
                 System.out.println("6 - Probar Cohete");
                 System.out.println("---------------------------------------");
                 System.out.println("Ingrese la opcion que desea: ");
@@ -518,6 +518,11 @@ public class Lab3P2_Wilmer_12211100 {
                         for (Cohetes Cohete : Cohetes) {
                             System.out.println("Cohete " + Cohetes.indexOf(Cohete));
                             System.out.println(Cohete);
+                        }
+                        
+                        for (Planetas planet : Planets) {
+                            System.out.println("Planeta " + Planets.indexOf(planet));
+                            System.out.println(planet);
                         }
                     }
                     break;
